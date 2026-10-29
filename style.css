@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--rose:#d94f78;--dark:#9d3152;--pink:#fff1f5;--ink:#482a36;--muted:#8e6b78;--cream:#fffaf5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.75 'DM Sans',sans-serif}header{position:absolute;top:0;width:100%;padding:22px clamp(20px,6vw,82px);display:flex;justify-content:space-between;gap:15px;font-size:.9rem;font-weight:700;z-index:2}header a:last-child{color:var(--dark)}.hero{min-height:100vh;padding:110px 22px 65px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse,#fff 0%,var(--pink) 58%,#ffe4ec 100%)}.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.72rem;font-weight:700;color:var(--dark)}.heart{width:68px;height:68px;margin:22px 0 14px;display:grid;place-items:center;border-radius:50%;background:var(--rose);color:white;font-size:2rem;box-shadow:0 12px 30px #d94f7838;animation:pulse 2s infinite}h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600}h1{font-size:clamp(3.5rem,9vw,7.4rem);line-height:1;letter-spacing:-.05em;margin:8px 0 20px}h1 em,h2 em{color:var(--rose)}em{font-style:italic}.lead{max-width:480px;color:var(--muted);font-size:1.1rem}.button{display:inline-block;border:0;border-radius:999px;background:var(--rose);color:white;padding:13px 24px;font:700 1rem 'DM Sans',sans-serif;text-decoration:none;cursor:pointer;box-shadow:0 9px 22px #d94f7838;transition:.2s}.button:hover{background:var(--dark);transform:translateY(-3px)}.hint{font-size:.8rem;color:var(--muted);margin-top:28px}.card{max-width:850px;margin:0 auto;padding:clamp(28px,6vw,65px);background:white;border:1px solid #f8dce5;border-radius:26px;box-shadow:0 20px 60px #6b2d4410}.letter{margin-top:0}.letter h2,.memories h2,.promise h2{font-size:clamp(2.2rem,5vw,3.5rem);line-height:1.2;margin:10px 0 25px;letter-spacing:-.03em}.letter p{color:#6d4b58}.signature{padding-top:8px;color:var(--dark)!important}.letter small{display:block;border-top:1px solid #f5e4e9;padding-top:18px;color:#a0838d}.memories{text-align:center;max-width:1120px;margin:auto;padding:90px 22px}.muted{color:var(--muted);margin-top:-12px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px;text-align:left}.grid article{min-height:240px;padding:25px;border:1px solid #f5d9e2;border-radius:22px;background:linear-gradient(145deg,#fff,#fff0f4);display:flex;flex-direction:column;justify-content:flex-end}.grid article.pink{background:linear-gradient(145deg,#fff0f4,#ffdbe6)}.grid article.cream{background:linear-gradient(145deg,#fffaf5,#f9e9dc)}.grid span{font-size:2.5rem;color:var(--rose);margin-bottom:auto}.grid h3{font-size:1.4rem;margin:20px 0 4px}.grid p{font-size:.9rem;color:var(--muted);margin:0}.promise{text-align:center;background:var(--pink);padding:85px 22px}.promise>p:not(#surpriseMessage){max-width:650px;margin:0 auto 28px;color:var(--muted)}#surpriseMessage{min-height:30px;color:var(--dark);font-weight:700;margin-top:20px}footer{text-align:center;padding:28px 20px;background:white;color:var(--muted);font-size:.85rem}footer strong{color:var(--dark)}footer small{display:block;font-size:.75rem}@keyframes pulse{50%{transform:scale(1.07)}}@media(max-width:700px){header{padding:18px 16px;font-size:.75rem}.card{margin:0 14px;padding:28px 22px}.memories{padding:65px 18px}.grid{grid-template-columns:1fr}.grid article{min-height:190px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+
+
+
+/* Center the grid section on the page */
+.memories .grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Wide card containers */
+.memories .grid article {
+    flex: 1;
+    min-width: 280px;
+    max-width: 360px; /* Expands card width */
+    padding: 24px;
+    border-radius: 28px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Balanced memory lane photo sizing */
+.memories .grid article img {
+    width: 100%;
+    height: 300px; /* Proportional height to match wider cards */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto 24px;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustment for tablets & mobile */
+@media (max-width: 900px) {
+    .memories .grid {
+        flex-wrap: wrap;
+    }
+    .memories .grid article {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+    .memories .grid article img {
+        height: 250px;
+    }
+}
